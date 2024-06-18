@@ -23,3 +23,8 @@ jobs:
 
       - name: Build and verify
         run: ./gradlew clean buildPlugin test modernizer biz-lermitage-oga-gradle-check verifyPlugin showGeneratedPlugin -PpluginLicenseType=subscription -PpluginIdeaVersion=${{ matrix.ij }} --warning-mode all
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: *.zip
