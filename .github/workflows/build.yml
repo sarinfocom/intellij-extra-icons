@@ -27,4 +27,9 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          path: *.zip
+          path: ./*.zip
+
+
+        
+
+          
